@@ -7,8 +7,45 @@
     <title>Weekly Bible Study App</title>
 </head>
 <body>
-    
-    
+    <header>
+        <div id="header-container">
+            <h1>Weekly Bible Study App</h1>
+        </div>
+    </header>
+
+    <main>
+        <div id="navigation-container">
+            <h3>Week Navigation</h3>
+            <nav aria-label="Week navigation">
+                <div id="button-container">
+                    <button type="button" id="previous-btn" aria-label="Go to previous week's readings">Previous</button>
+                    <p>Week <span id="nav-week-number" aria-live="polite"></span></p>
+                    <button type="button" id="next-btn" aria-label="Go to next week's readings">Next</button>
+                </div>
+            </nav>
+        </div>
+
+        <div id="weekly-container">
+            <section aria-labelledby="readings-heading">
+                <h3 id="readings-heading">Week <span id="reading-week-number" aria-live="polite"></span> Readings</h3>
+                <ul>
+                    <li><strong>Old Testament:</strong> <span id="OT-reading"></span></li>
+                    <li><strong>New Testament:</strong> <span id="NT-reading"></span></li>
+                    <li><strong>Psalms:</strong> <span id="psalms-reading"></span></li>
+                    <li><strong>Proverbs:</strong> <span id="proverbs-reading"></span></li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="completion-container">
+            <input type="checkbox" id="week-completed"> 
+            <label for="week-completed" id="completed-checkbox-label">Mark this week complete</label>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
