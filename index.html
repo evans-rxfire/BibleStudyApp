@@ -13,9 +13,11 @@
         </div>
     </header>
 
-    <main>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <main id="main-content">
         <div id="navigation-container">
-            <h3>Week Navigation</h3>
+            <h2>Week Navigation</h2>
             <nav aria-label="Week navigation">
                 <div id="button-container">
                     <button type="button" id="previous-btn" aria-label="Go to previous week's readings">Previous</button>
@@ -27,7 +29,7 @@
 
         <div id="weekly-container">
             <section aria-labelledby="readings-heading">
-                <h3 id="readings-heading">Week <span id="reading-week-number" aria-live="polite"></span> Readings</h3>
+                <h2 id="readings-heading">Week <span id="reading-week-number" aria-live="polite"></span> Readings</h2>
                 <ul>
                     <li><strong>Old Testament:</strong> <span id="OT-reading"></span></li>
                     <li><strong>New Testament:</strong> <span id="NT-reading"></span></li>
@@ -38,12 +40,15 @@
         </div>
 
         <div id="completion-container">
-            <input type="checkbox" id="week-completed"> 
-            <label for="week-completed" id="completed-checkbox-label">Mark this week complete</label>
+            <fieldset>
+                <legend>Progress</legend>
+                <input type="checkbox" id="week-completed"> 
+                <label for="week-completed" id="completed-checkbox-label">Mark this week complete</label>
+            </fieldset>
         </div>
     </main>
     <footer>
-
+        <h2 class="visually-hidden">Footer</h2>
     </footer>
 
     <script src="main.js"></script>

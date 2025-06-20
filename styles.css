@@ -1,3 +1,14 @@
+:root {
+  --primary: #4B3F72;       /* deep purple */
+  --accent: #E07A5F;        /* coral */
+  --background: #F4F1DE;    /* light cream */
+  --surface: #FFFFFF;       /* cards/panels */
+  --text: #333333;
+  --muted: #999999;
+  --complete: #81B29A;      /* soft green */
+  --focus: #3D405B;
+}
+
 *,
 *::before,
 *::after {
@@ -6,3 +17,130 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: var(--surface);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--focus);
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--background);
+}
+
+fieldset {
+  border: 2px solid var(--primary);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  margin-top: 1.5rem;
+}
+
+legend {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+#week-completed:checked + label {
+  color: var(--complete);
+  font-weight: bold;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  background-color: var(--focus);
+  color: white;
+  z-index: 1000;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 600px) {
+  main {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  #button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
