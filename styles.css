@@ -7,6 +7,7 @@
   --muted: #999999;
   --complete: #81B29A;
   --focus: #3D405B;
+  --primary-muted: rgba(75, 63, 114, 0.4);
 }
 
 *,
@@ -40,6 +41,48 @@ main {
   background-color: var(--surface);
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+strong {
+  color: var(--primary);
+}
+
+#reading-plan-details {
+  border: 1px solid var(--primary-muted);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+#reading-plan-details summary {
+  padding: 0.25rem, 0.5rem;
+  font-weight: 500;
+  color: var(--primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#reading-plan-details summary svg {
+  stroke: var(--primary);
+  vertical-align: middle;
+}
+
+#reading-plan-details p,
+#reading-plan-details ul {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+#reading-plan-details ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+#reading-plan-details ul li::marker {
+  color: var(--primary);
 }
 
 h2 {
