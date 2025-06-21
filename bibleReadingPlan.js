@@ -2144,4 +2144,4 @@ const bibleReadingPlan = [
    "Proverbs": "Proverbs",
    "Prov Ch.": 31
  }
-]
+];
