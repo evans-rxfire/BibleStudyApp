@@ -42,11 +42,43 @@
         <div id="completion-container">
             <fieldset>
                 <legend>Progress</legend>
-                <input type="checkbox" id="week-completed"> 
-                <label for="week-completed" id="completed-checkbox-label">Mark this week complete</label>
+                <div class="progress-row">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="week-completed"> 
+                        <label for="week-completed" id="completed-checkbox-label">Mark this week complete</label>    
+                    </div> 
+
+                    <div class="progress-wrapper">
+                        <label for="progress-bar">Overall Progress:</label>
+                        <progress id="progress-bar" max="52" value="0"></progress>
+                        <span id="progress-label" aria-live="polite"></span>
+                    </div>
+                </div>
             </fieldset>
         </div>
+
+        <div id="controls-container">       
+            <div id="export-import-container">
+                <button type="button" id="export-btn" aria-label="Export progrss to file">Export Progress</button>
+
+                <label for="import-file" class="file-input-label">Import Progress</label>
+                <input type="file" id="import-file" accept=".json" aria-label="Import JSON file" style="display:none;">
+                
+                <div id="import-preview">
+                    <h3>Import Preview</h3>
+                    <ul id="preview-list"></ul>
+                    <button id="confirm-import-btn">Confirm Import</button>
+                    <button id="cancel-import-btn">Cancel</button>
+                </div>
+            </div>
+
+            <div id="reset-container">
+                <button type="button" id="reset-btn" aria-label="Reset all progress">Reset All Progress</button>
+            </div>
+        </div>
+        
     </main>
+
     <footer>
         <h2 class="visually-hidden">Footer</h2>
     </footer>
