@@ -243,6 +243,13 @@ input[type="checkbox"] {
   align-self: flex-start;
 }
 
+footer p {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 0.2rem;
+}
+
 .skip-link {
   position: absolute;
   left: -999px;
